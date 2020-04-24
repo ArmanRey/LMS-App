@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+      <include
+        android:id="@+id/rl_toolbar"
+        layout="@layout/include_layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:text="SUBMIT"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/shape_rect_orange_fill"
+        android:layout_marginLeft="@dimen/d_10dp"
+        android:layout_marginBottom="@dimen/d_10dp"
+        android:layout_marginTop="@dimen/d_10dp"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/rl_toolbar"
+        android:layout_above="@id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/d_10dp"
+            >
+            <TextView
+                style="@style/TextViewStyle"
+                android:textColor="@color/colorGrayText"
+                android:text="Fill up the form below selecting all course(s) you wish to attend. We'll schedule a batch making it best fit for you."
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Enter name"
+                style="@style/TextViewStyle"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:background="@drawable/selector_edittext_create_account"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Name"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_small"
+                />
+            <TextView
+                android:text="Enter emailId"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:background="@drawable/selector_edittext_create_account"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Email Id"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_small"
+                />
+            <TextView
+                android:text="Enter mobile number"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:background="@drawable/selector_edittext_create_account"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Mobile Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="@dimen/text_size_small"
+                />
+            <TextView
+                android:text="Are you a Working Professional or a student?"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/workTypeRadioGroup"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/d_20dp"
+                    android:paddingTop="@dimen/d_5dp"
+                    android:paddingRight="@dimen/d_20dp"
+                    android:paddingBottom="@dimen/d_5dp"
+                    android:text="Working Professional"
+                     android:textColor="@color/radio_text_selector"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/d_20dp"
+                    android:paddingTop="@dimen/d_5dp"
+                    android:paddingRight="@dimen/d_20dp"
+                    android:paddingBottom="@dimen/d_5dp"
+                    android:text="Student"
+                    android:textColor="@color/radio_text_selector"
+                    android:textSize="@dimen/text_size_small" />
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/t1"
+                android:text="Role"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_role"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:background="@drawable/selector_edittext_create_account"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Role"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_small"
+                />
+            <TextView
+                android:id="@+id/t2"
+                android:text="Organization"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_organization"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:background="@drawable/selector_edittext_create_account"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Organization"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_size_small"
+                />
+            </LinearLayout>
+            <TextView
+                android:text="When can you attend our sessions ?"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/sessionTimeRadioGroup"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/d_20dp"
+                    android:paddingTop="@dimen/d_5dp"
+                    android:paddingRight="@dimen/d_20dp"
+                    android:paddingBottom="@dimen/d_5dp"
+                    android:text="Weekdays"
+                    android:textColor="@color/radio_text_selector"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/d_20dp"
+                    android:paddingTop="@dimen/d_5dp"
+                    android:paddingRight="@dimen/d_20dp"
+                    android:paddingBottom="@dimen/d_5dp"
+                    android:text="Weekend"
+                    android:textColor="@color/radio_text_selector"
+                    android:textSize="@dimen/text_size_small" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/d_20dp"
+                    android:paddingTop="@dimen/d_5dp"
+                    android:paddingRight="@dimen/d_20dp"
+                    android:paddingBottom="@dimen/d_5dp"
+                    android:text="Both"
+                    android:textColor="@color/radio_text_selector"
+                    android:textSize="@dimen/text_size_small" />
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Course(s) you wish to attend ?"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/courseList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:text="How did you come to know about Weekendr?"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            <TextView
+                android:text="Enter password"
+                style="@style/TextViewStyle"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:background="@drawable/selector_edittext_create_account"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:textSize="@dimen/text_size_small"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

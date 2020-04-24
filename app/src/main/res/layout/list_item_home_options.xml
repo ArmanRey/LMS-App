@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:gravity="center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="@dimen/d_5dp"
+    android:background="@drawable/rectangle_background_curve"
+    android:padding="@dimen/d_5dp">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@mipmap/ic_launcher">
+    </ImageView>
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:gravity="center_vertical"
+        android:background="#60000000">
+
+        <TextView
+            android:id="@+id/courseName"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="@dimen/d_10dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:textSize="23sp"
+            tools:text="@string/app_name" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

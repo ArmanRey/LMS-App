@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LMS</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="channel_name">lms cannel</string>
+    <string name="msg_check_internet_connection">Please check internet connection</string>
+    
+    <string-array name="about">
+        <item>Friends/Seniors</item>
+        <item>Weekendr\'s Website</item>
+        <item>Google Search</item>
+        <item>Facebook/LinkedIn</item>
+        <item>Email</item>
+        <item>College Poster</item>
+   </string-array>
+</resources>

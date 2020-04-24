@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sub_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/d_20dp">
+
+            <ImageView
+                android:id="@+id/iv_app_name"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/d_5dp"
+                app:srcCompat="@drawable/black_circle" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Weekendr.in"
+                android:layout_margin="@dimen/d_5dp"
+                android:letterSpacing="1"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_large" />
+            <LinearLayout
+                android:id="@+id/loginLayout"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/d_10dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <EditText
+                    android:id="@+id/et_user_email"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_5dp"
+                    android:background="@drawable/selector_edittext_create_account"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Enter Emailid"
+                    android:imeOptions="actionNext"
+                    android:textSize="@dimen/text_size_normal"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/pwdLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_10dp">
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_edittext_create_account"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="@dimen/text_size_normal"
+                        android:hint="Enter Password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword" />
+
+                    <ImageView
+                        android:id="@+id/showPwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/d_10dp"
+                        app:srcCompat="@drawable/showpassword" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_10dp">
+
+
+                    <TextView
+                        android:id="@+id/forgotPasswordLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Forgot password?"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_small" />
+
+
+                </FrameLayout>
+
+                <CheckBox
+                    android:id="@+id/rememberMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginLeft="-5dp"
+                    android:buttonTint="@color/orange_dark"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Remember me"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_small" />
+
+                <Button
+                    android:id="@+id/btn_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_10dp"
+                    android:background="@drawable/shape_rect_orange_fill"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Log in"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/colorWhite" />
+                <Button
+                    android:id="@+id/btn_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_10dp"
+                    android:background="@drawable/shape_rect_orange_fill"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Register here"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+  </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

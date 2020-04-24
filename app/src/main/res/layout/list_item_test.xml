@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/rectangle_background_curve">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/takeTest"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/d_5dp"
+            android:background="@drawable/rectangle_background_green"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="@dimen/d_5dp"
+            android:singleLine="true"
+            android:text="Take Test"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_small" />
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:padding="@dimen/d_5dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/takeTest"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/testName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="1"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_normal" />
+            <TextView
+                android:id="@+id/testTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="1"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_small" />
+            <TextView
+                android:id="@+id/viewDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="1"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_small" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
